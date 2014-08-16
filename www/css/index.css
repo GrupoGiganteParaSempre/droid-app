@@ -7,4 +7,62 @@
 
 * {
     font-family: 'Roboto', sans-serif;
+    /*background-color: #B70B23;*/
+    padding: 0px;
+    margin: 0px;
+}
+
+/*core-toolbar {
+    background-color: #B70B23;
+
+    -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, .4);
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, .4);
+}
+
+core-scroll-header-panel::shadow #headerBg {
+    background-image: url(../img/seats.jpg);
+}
+
+core-scroll-header-panel::shadow #condensedHeaderBg {
+    background-color: #B70B23;
+}
+*/
+
+html, body {
+    height: 100%;
+}
+
+body { margin: 0; }
+
+core-scroll-header-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+/* background for toolbar when it is at its full size */
+core-scroll-header-panel::shadow #headerBg {
+    background-image: url(../img/seats.jpg);
+}
+
+/* background for toolbar when it is condensed */
+core-scroll-header-panel::shadow #condensedHeaderBg {
+    background-color: #B70B23;
+}
+
+core-toolbar {
+    color: #f1f1f1;
+    fill: #f1f1f1;
+    background-color: transparent;
+}
+
+.title {
+    -webkit-transform-origin: 0;
+    transform-origin: 0;
+}
+
+.content {
+    padding: 10px 30px;
 }
