@@ -3,6 +3,11 @@
     /*background-color: #B70B23;*/
     padding: 0px;
     margin: 0px;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 /*core-toolbar {
@@ -49,7 +54,7 @@ core-toolbar {
     color: #f1f1f1;
     fill: #f1f1f1;
     background-color: transparent;
-    height: 225px!important;
+    height: 285px!important;
 }
 
 .title {
@@ -58,7 +63,7 @@ core-toolbar {
 }
 
 .content-title {
-    padding: 20px 50px;
+    padding: 20px 72px;
     width: 100%;
     margin: -10px!important;
     background-color:#b0120a;
@@ -70,6 +75,18 @@ core-toolbar {
     font-weight: normal;
 }
 
-.content-inner {
-    padding: 10px 30px;
+ paper-button {
+    margin: 1em;
+    width: 10em;
+    background-color: #b0120a!important;
+    color: #fde0dc!important;
+}
+
+polymer-ui-card {
+    display: block;
+    /*height: 200px;*/
+    width: auto;
+    padding: 20px;
+    overflow: auto;
+
 }
