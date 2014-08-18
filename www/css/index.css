@@ -9,22 +9,6 @@
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
-/*core-toolbar {
-    background-color: #B70B23;
-
-    -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, .4);
-    box-shadow: 0 0 8px 0 rgba(0, 0, 0, .4);
-}
-
-core-scroll-header-panel::shadow #headerBg {
-    background-image: url(../img/seats.jpg);
-}
-
-core-scroll-header-panel::shadow #condensedHeaderBg {
-    background-color: #B70B23;
-}
-*/
-
 html, body {
     height: 100%;
 }
@@ -53,11 +37,14 @@ core-scroll-header-panel::shadow #condensedHeaderBg {
     background-color: #b0120a;
 }
 
+core-toolbar.tall {
+    background-color: transparent;
+}
+
 core-toolbar {
     color: #f1f1f1;
     fill: #f1f1f1;
-    background-color: transparent;
-    height: 285px!important;
+    background-color: #b0120a;
 }
 
 .title {
@@ -90,6 +77,15 @@ polymer-ui-card {
     /*height: 200px;*/
     width: auto;
     padding: 20px;
+    margin:5px;
     overflow: auto;
+}
 
+[drawer] {
+    background-color: #FFF;
+    border-right: 1px solid #ccc;
+}
+
+core-drawer-panel[narrow] button {
+    display: inline-block
 }

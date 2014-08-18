@@ -1,0 +1,53 @@
+<style>
+#headerBg {
+    background-image: url(img/news.jpg)!important;
+}
+core-scroll-header-panel::shadow #headerBg {
+    background-image: url(img/news.jpg)!important;
+}
+paper-progress.pink::shadow #activeProgress {
+  background-color: #e91e63;
+}
+
+paper-progress.pink::shadow #secondaryProgress {
+  background-color: #f8bbd0;
+}
+
+</style>
+
+<core-scroll-header-panel shadow condenses keepCondensedHeader>
+    <core-toolbar class="tall">
+        <core-icon-button icon="menu"></core-icon-button>
+        <div class="bottom indent">Notícias</div>
+        <paper-progress class="bottom fit pink"></paper-progress>
+    </core-toolbar>
+    
+    <div class="content" style="padding:10px">
+        <display-rss url="http://www.internacional.com.br/rss/noticias_inter.xml" entries="20" refresh="10000"></display-rss>
+    </div>
+</core-scroll-header-panel>
+
+<script>
+    var progress = document.querySelector('paper-progress');
+    var repeat, maxRepeat = 5, animating = false;
+    function nextProgress() {
+      animating = true;
+      if (progress.value < progress.max) {
+        progress.value += (progress.step || 1);
+      } else {
+        if (++repeat >= maxRepeat) {
+          animating = false;
+          return;
+        }
+        progress.value = progress.min;
+      }
+      progress.async(nextProgress);
+    }
+    function startProgress() {
+      repeat = 0;
+      progress.value = progress.min;
+      if (!animating) {
+        nextProgress();
+      }
+    }
+</script>
