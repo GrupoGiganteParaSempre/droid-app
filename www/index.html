@@ -19,24 +19,41 @@
     <link rel="import" href="bower_components/polymer-ipsum/dist/polymer-ipsum.html">
 
     <!-- styles -->
+    <link rel="stylesheet" type="text/css" href="bower_components/roboto-fontface/roboto-fontface.css" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
 </head>
 <body unresolved>
-    <core-scroll-header-panel condenses keepCondensedHeader>
+    <core-scroll-header-panel shadow condenses keepCondensedHeader>
+        <!--
         <core-toolbar class="tall">
             <core-icon-button icon="arrow-back"></core-icon-button>
             <div flex></div>
-            <!--
-                <core-icon-button icon="search"></core-icon-button>
-                <core-icon-button icon="more-vert"></core-icon-button>
-            -->
+            <core-icon-button icon="search"></core-icon-button>
+            <core-icon-button icon="more-vert"></core-icon-button>
             <div class="bottom indent title">
                 Checkin<br>
                 <small>INT x SPO</small>
             </div>
         </core-toolbar>
+        -->
+        <core-toolbar class="tall">
+            <core-icon-button icon="menu"></core-icon-button>
+            <div flex></div>
+            <core-icon-button icon="help"></core-icon-button>
+
+            <div class="bottom content-title" style="background-color: ">
+                Checkin
+                <small>Internacional x São Paulo</small>
+            </div>
+        </core-toolbar>
+        
         <div class="content">
-            <polymer-ipsum paragraphs="100"></polymer-ipsum>
+
+
+            <div class="content-inner">
+                <polymer-ipsum paragraphs="100"></polymer-ipsum>
+                
+            </div>
         </div>
     </core-scroll-header-panel>
 
