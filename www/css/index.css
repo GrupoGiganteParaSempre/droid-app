@@ -4,10 +4,9 @@
     padding: 0px;
     margin: 0px;
 
+    -webkit-touch-callout: none;
     -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 /*core-toolbar {
@@ -40,9 +39,13 @@ core-scroll-header-panel {
     left: 0;
 }
 
+#headerBg {
+    background-image: url(../img/seats.png);
+}
+
 /* background for toolbar when it is at its full size */
 core-scroll-header-panel::shadow #headerBg {
-    background-image: url(../img/seats.jpg);
+    background-image: url(../img/seats.png);
 }
 
 /* background for toolbar when it is condensed */
